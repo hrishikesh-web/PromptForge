@@ -1,0 +1,28 @@
+{
+  "name": "promptforge-server",
+  "version": "1.0.0",
+  "description": "PromptForge Backend API (Express + mysql2 raw parameterized SQL)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node ../database/library/build.js --check && node test/test-runner.js && node --test test/test-security.js",
+    "test:security": "node --test test/test-security.js",
+    "test:sql": "node test/test-ppt-queries.js",
+    "test:live": "node test/test-live-api.js",
+    "db:setup": "node db/setup.js",
+    "db:reset": "node db/setup.js --force",
+    "db:migrate": "node db/migrate.js",
+    "db:build-library": "node ../database/library/build.js",
+    "demo:passwords": "node scripts/set-demo-passwords.js",
+    "admin:promote": "node scripts/promote-admin.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.11.0"
+  }
+}
