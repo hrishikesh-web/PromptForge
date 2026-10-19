@@ -1,6 +1,5 @@
 import React from 'react';
 
-// A few muted, distinct tints so different people are easy to tell apart.
 const TINTS = [
   'bg-sky-500/15 text-sky-300 border-sky-500/30',
   'bg-violet-500/15 text-violet-300 border-violet-500/30',
